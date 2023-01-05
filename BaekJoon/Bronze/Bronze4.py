@@ -37,7 +37,7 @@ while True :
 
 
 
-# 2439 별 찍기
+# 2439 별 찍기1
 
 # 문자열도 연산이 가능
 star = int(input())
@@ -53,5 +53,5 @@ star = int(input())
 for i in range (star,0,-1):
     star_line = '*'* i
     print (star_line)
-    
+
 '''
