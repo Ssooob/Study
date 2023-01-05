@@ -1,4 +1,19 @@
+
+## 시퀀스(string, tuple, list, range)를 포함한 객체요소를 모두 순회함
+
+
+
 ## range
+* 기본형
+    * range(n) : 0부터 n-1까지의 시퀀스
+* 범위지정
+    * range(n,m) : n부터 m-1까지의 숫자 시퀀스
+* 범위 및 스텝 지정
+    * range(n,m,s) : n부터 m-1까지 s만큼 증가시키는 숫자 시퀀스
+    
+
+    </br>
+
 ```python
 for x in range ()
 # range () 에 그냥 list, string 이런 애들이 들어가도 됨, 처음부터 끝까지 해쥼

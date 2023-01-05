@@ -65,3 +65,26 @@ if  0<= a < 10 :
     ~
 
 ```
+
+# 딕셔너리
+### 출력물의 차이
+```python
+# 양식 자체가 출력
+print(dict_variable.items())  
+>> dict_items([('이름', '정우영'), ('생년월일', '19000101'), ('회사', '하이퍼그로스')])
+
+# key와 value 만 출력 (for문 사용해야함)
+for key, value in dict_variable.items():
+    print(key, value)
+>> 이름 정우영
+>> 생년월일 19000101
+>> 회사 하이퍼그로스
+
+```
+
+# String formatting
+* 문자열을 변수를 활용하여 만드는 방법
+```python
+pi = 3.141592
+print(f'반지름이 2일때 원의 넓이는 { pi*2*2}')
+```
