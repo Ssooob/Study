@@ -5,10 +5,32 @@
     if char == "a" :
         print(1)
 ```
+### a의 인덱스를 출력할 때
+```python
+# 반복문에서 숫자로 접근하고 싶을 때는 range를 쓰는게 좋음
+for i in range(len(string)):
+    if string[i] == 'e':
+        print(i)
+        break
+else :
+    print(-1)
+```
 
 * 조건문
 ```python
 if 'a' in word
+```
+
+## a가 없을 때 
+```python
+locations =['서울','서울','대전','광주','서울','대전','부산','부산']
+result = []
+
+for location in locations :
+    if location not in result :
+        result.append(location)
+print(result)
+print(len(result))
 ```
 
 # List
@@ -68,6 +90,7 @@ if  0<= a < 10 :
 
 # 딕셔너리
 ### 출력물의 차이
+### 요소의 갯수를 출력할 때는 딕셔너리가 좋음
 ```python
 # 양식 자체가 출력
 print(dict_variable.items())  
@@ -82,9 +105,36 @@ for key, value in dict_variable.items():
 
 ```
 
+### 입력값에 따른 중복 값 출력
+dictionary를 활용하면 각 문자가 몇개씩 나오는지 알 수 있음
+```python
+input1 = input("문자열을 입력하세요 >")
+dict_variable = {}
+
+for j in input1:
+    cnt = 0
+    for i in input1: 
+        if j in i: 
+            cnt +=1
+    dict_variable[j] = cnt
+
+for name in dict_variable:
+    print(name,dict_variable[name])
+    
+```
+
 # String formatting
 * 문자열을 변수를 활용하여 만드는 방법
 ```python
 pi = 3.141592
 print(f'반지름이 2일때 원의 넓이는 { pi*2*2}')
 ```
+
+# 입력 값
+## 여러 정수를 받을 때는 list 사용
+``` python
+a,b = list(map(int,input().split()))
+print(a,b)
+
+```
+## 여러 문자열을 받을 때는 

@@ -63,6 +63,39 @@ for name in students:
     김철수 90
 ```
 
+## 중복 딕셔너리
+* 딕셔너리 = {키1 : {키 A : 값 A}, 키2 : {키 B, 값 B}}
+```python
+terrestrial_planet = {
+    'Mercury': {
+        'mean_radius': 2439.7,
+        'mass': 3.3022E+23,
+        'orbital_period': 87.969
+    },
+    'Venus': {
+        'mean_radius': 6051.8,
+        'mass': 4.8676E+24,
+        'orbital_period': 224.70069,
+    }
+}
+
+# 입력을 사용자에게 받을 때의 예시
+input1 = input("이름을 입력하세요 >")
+input2 = input("전화번호를 입력하세요 >")
+input3 = input("이메일을 입력하세요 >")
+input4 = input("거주지를 입력하세요 >")
+
+dict_variable = {
+    input1 : {
+        "전화번호" : input2,
+        "이메일" : input3,
+        "거주지" : input4,
+
+    }
+}
+
+```
+
 
 # 모듈
 * 모듈 : 다양한 기능(function)을 하나의 파일로
