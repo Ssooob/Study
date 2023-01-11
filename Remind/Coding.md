@@ -5,6 +5,10 @@
     if char == "a" :
         print(1)
 ```
+* 조건문
+```python
+if 'a' in word
+```
 ### a의 인덱스를 출력할 때
 ```python
 # 반복문에서 숫자로 접근하고 싶을 때는 range를 쓰는게 좋음
@@ -16,9 +20,19 @@ else :
     print(-1)
 ```
 
-* 조건문
+### a의 인덱스를 삭제해야할 때 
+* 문자열을 입력받고, 특정 문자를 제거한 결과를 출력해라
 ```python
-if 'a' in word
+# 빈 문자열 만드는 것이 중요
+# 문자열도 연산이 가능
+string = input("문자열을 입력하세요 >") # split이 안 들어감
+result = ""
+
+for i in string : 
+    if i != 'e' :
+        result += i 
+print(result)
+
 ```
 
 ## a가 없을 때 
@@ -120,6 +134,27 @@ for j in input1:
 
 for name in dict_variable:
     print(name,dict_variable[name])
+
+
+# 다른 문제
+
+#2 문자열을 입력받고, 각 단어의 등장 횟수를 출력 
+# 이 때는 딕셔너리 쓰는게 좋음
+
+string = input("입력:").split()
+dict_var = {}
+
+# count 안 쓸 때
+# i는 종류 구분하기
+
+for word in string:
+    if word in dict_var :
+        dict_var[word] += 1 
+    elif word not in dict_var :
+        dict_var[word] = 1
+
+for key, value in dict_var.items():
+    print(f"{key} {value}")
     
 ```
 
@@ -138,3 +173,33 @@ print(a,b)
 
 ```
 ## 여러 문자열을 받을 때는 
+```python
+strings = input()
+>> <class 'str'>
+
+strings = input().split()
+>> <class 'list'>
+
+# type이 다르니, 유의해서 사용해야함
+
+```
+
+
+</br>
+</br>
+
+# 출력값
+## 여러 문자열을 입력받고 출력 할 때 
+* ```print(*string)```
+
+```python
+# Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+strings= input().split()
+print(strings)
+>> ['Lorem', 'ipsum', 'dolor', 'sit', 'amet,', 'consectetur', 'adipiscing', 'elit.']
+
+#이를 문장으로 이어 도출해야하는 경우
+print(*strings)
+>> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+```
