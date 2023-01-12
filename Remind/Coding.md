@@ -158,6 +158,7 @@ for key, value in dict_var.items():
     
 ```
 
+
 # String formatting
 * 문자열을 변수를 활용하여 만드는 방법
 ```python
@@ -202,4 +203,73 @@ print(strings)
 print(*strings)
 >> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+```
+
+
+# 파이썬 응용
+
+## 조건문
+```python 
+# 절대값 출력하는 값
+value = num if num >=0 else -num 
+if num >=0:
+    value = num
+else :
+    value = -num # 과 같음
+```
+```python
+
+num = 2
+result = '홀' if num%2 else '짝'
+
+```
+## List comprehension
+```python
+cubic_list = []
+for number in range(1,4):
+    cubic_list.append(number**3)
+print(cubic_list) #랑 아래가 같음
+```
+```python
+
+[number**3 for number in range(1,4)]
+
+```
+
+## Dictionart comprehention
+```python
+{number : number**3 for number in range(1,4)}
+```
+
+## 반복문
+### enumerate()
+* 인덱스와 객체를 쌍으로 담은 열겨형 객체 반환
+    * (index,value) 형태의 tuple로 구성된 열거 객체를 반환
+    ```python
+    members = ['민수','철수','영희']
+
+    for i in range(len(members)):
+        print(f"{i} {members[i]}")
+        # 랑
+    for i, member in enmerate(members):
+        print(i,member) 
+    ```
+
+
+### lambda
+* 일회용 함수 사용할 때 -> 이름 없는 함수
+
+```python
+#2로 나눈 몫으로만 구성된
+#[1,2]
+numbers = [2,4]
+def div_2(n):
+    return n//2
+print(list(map(div_2,numbers)))
+```
+```python
+print(list(map(lambda n : n//2, numbers)))
+# lambda : 이름 없는 함수
+# 입력 해야하는 변수
+# : n//2 : 동작할 함수
 ```
