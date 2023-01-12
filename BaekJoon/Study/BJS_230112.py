@@ -11,6 +11,7 @@ cost = list(map(int,input().split()))
 
 # 24시간에 대한 빈 배열 생성
 time_100 = [0 for j in range(100)]
+# list = [0]* 100 -> 이런식으로 숫자로 해도 됨
 #print(time_24)
 
 for c in range(3):
@@ -23,7 +24,7 @@ print(total_count)
 
 
 
-# 2675 자열 반복
+# 2675 문자열 반복
 
 T = int(input())
 for t in range(1,T+1):
@@ -40,7 +41,8 @@ for t in range(1,T+1):
 num = int(input())
 N = num
 count = 0 
-while True :
+while True : 
+    # 
     # divmod 
     lnum = num//10 # 2
     rnum = num%10  # 6

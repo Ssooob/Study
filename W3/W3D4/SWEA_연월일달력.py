@@ -32,3 +32,44 @@ for t in range(1,T+1):
 
     else : 
         print(f"#{t} {-1}")
+
+
+    ## 광배님 코드
+    T = int(input())
+
+data = [-1 ,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+for t in range(1, T + 1):
+    ymd = input()
+
+    y = ymd[:4]
+    m = ymd[4:6]
+    d = ymd[6:]
+
+    if int(m) > 12 or int(d) > data[int(m)]:
+        result = -1
+    else:
+        result = f'{y}/{m}/{d}'
+    print(f'#{t} {result}')
+
+# 민욱님 코드
+
+li=[]
+for k in range(1,13):
+    if k == 2:
+        li.append(range(1,29))
+    elif k==4 or k==6 or k==9 or k==11:
+        li.append(range(1,31))
+    else:
+        li.append(range(1,32))
+    
+
+for i in range(1,int(input())+1):
+    n = input()
+    if int(n[4:6]) == 0 or int(n[4:6]) > 12:
+        print(f'#{i} -1')
+    else:
+        if int(n[6:8]) in li[int(n[4:6])-1]:
+            print(f'#{i} {n[:4]}/{n[4:6]}/{n[6:8]}')
+        else:
+            print(f'#{i} -1')
+            
