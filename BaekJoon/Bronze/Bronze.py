@@ -2,6 +2,10 @@
 # 백준 브론즈 4
 # 일단 여기다 풀고 괜찮은 문제는 따로 빼서 정리
 
+# 기본 코드
+import sys
+sys.stdin = open("input.txt", "r")
+
 '''
 # 1264 모음의 개수
 
@@ -48,10 +52,35 @@ for i in range (1,star+1):
 
 
 # 2440 별 찍기
-
+s
 star = int(input())
 for i in range (star,0,-1):
     star_line = '*'* i
     print (star_line)
 
+
+
+# 1152 단어의 개수
+strings = input().split()
+print(len(strings))
+
+
+# 1085 직사각형에서 탈출
+
+# 경계면으로만 가면되니까 기본 x,y값도 중요
+x,y,w,h = map(int,input().split())
+print(min(x,y,w-x,h-y))
+
+
+# 4153 직각삼각형
+while True :
+    num = list(map(int,input().split()))
+    if sum(num) == 0:
+        break
+    max_val = max(num)
+    num.remove(max_val)
+    if max_val*max_val == num[0]*num[0] + num[1]*num[1] :
+         print('right')
+    else :
+        print('wrong')
 '''

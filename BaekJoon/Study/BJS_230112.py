@@ -78,7 +78,7 @@ else :
 
 numbers = list(map(int,input()))
 
-zero = []
+zero = []s
 one = []
 cnt = 0
 for i in range(int(len(numbers))-1): 
@@ -97,4 +97,5 @@ for i in range(len(bowl)-1) :
     else : 
         height =  height + 5
 print(height)
+
 
