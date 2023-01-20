@@ -95,6 +95,53 @@ dict_variable = {
 }
 
 ```
+## 딕셔너리 정렬 
+</br>
+
+### dictionary key 오름차순 정렬
+### sorted 함수 사용 -> sort()는 리스트에서 사용하는 거
+### dictionary.items() 이용 -> key와 value가 튜플로 정리되어있는 애
+```python
+# origial dictionary
+d = {"dream": 0, "car": 99, "blockdmask": 1, "error": 30, "app": 20}
+
+# dictionary.items()
+d1 = sorted(d.items())
+
+print(f'sorted(d.items())      : {d1}')
+>> [('app',20),('blockdmask',1),('car',99),('dream',0),('error',30)]
+print(f'dict(sorted(d.items()) : {dict(d1)}')
+>> {'app':20, 'blockdmask': 1, 'car': 99,'dream':0,'error':30 }
+
+```
+</br>
+
+### dictionary value 오름차순 정렬
+### lambda 식을 사용하여 튜플에서 1 번째 index를 기준으로 정렬
+### dictionary.items() 이용
+```python
+# 람다 
+(lambda x,y: x + y)(10, 20)
+>>> 30
+```
+
+
+```python
+d = {'A': 3, 'C': 1, 'G': 5, 'T': 2}
+d.items()
+>>> dict_items([('A', 3), ('C', 1), ('G', 5), ('T', 2)])
+
+## 오름차순 정렬
+sorted(d.items(), key=lambda x: x[1])
+>>> [('C', 1), ('T', 2), ('A', 3), ('G', 5)]
+ 
+## 내림차순 정렬
+sorted(d.items(), key=lambda x: x[1], reverse=True)
+>>> [('G', 5), ('A', 3), ('T', 2), ('C', 1)] 
+```
+[참조](https://korbillgates.tistory.com/171)
+</br>
+</br>
 
 
 # 모듈

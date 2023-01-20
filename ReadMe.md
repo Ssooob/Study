@@ -17,3 +17,8 @@
 
 
  
+ep. 18 
+회사에서 본인을 빠르게 성장시키는 방법
+요 사람에 대한 영상이 괜찮은듯
+
+[ep.18](https://www.youtube.com/watch?v=drBdn...)

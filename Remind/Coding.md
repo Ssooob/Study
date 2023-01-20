@@ -9,6 +9,21 @@
 ```python
 if 'a' in word
 ```
+* 문자열 슬라이싱 
+```python
+# 문자열 a가 a로 시작하는 것을 알고 싶을 때
+a[0] == 'a'
+
+# ap로 시작하는 것을 알고싶을때
+a[:2] == 'ap'
+
+# 길이가 N인 문자로 시작하고 끝나는지 알고싶음
+'banana'.startswith('ba')
+>>  True
+'banana'.endswith('na')
+>>  True
+
+```
 ### a의 인덱스를 출력할 때
 ```python
 # 반복문에서 숫자로 접근하고 싶을 때는 range를 쓰는게 좋음
@@ -182,9 +197,35 @@ strings = input().split()
 >> <class 'list'>
 
 # type이 다르니, 유의해서 사용해야함
+```
+# 출력값
+## 조건문 
+```python
+print("A" if cnt >= 10 else "B")
+# print 내에 조건문을 넣을 수도 있음
 
 ```
+</br>
 
+# 자료형
+## 소수점 관리
+### 반올림
+* round : round(반올림하고자 하는 값, 자릿수)
+    * ```python b = round(1.23456, 0) c = round(1.23456, 1)```
+* fstring : "{:.2f}".format(실수 입력)
+    * 얘는 출력 포멧을 변경하는거지 값을 변경하는 것이 아님
+    * ```python a = "{:.2f}".format(1.23456789) print(a)```
+
+## 그 외 소수점 관리
+### import math를 사용해야함
+### 올림 
+* math.ceil()
+### 내림
+* math.floor()
+
+## 형변환
+* ord() : 문자열을 아스키코드로 변환
+* chr() : 아스키코드르 문자열로 변환
 
 </br>
 </br>
@@ -273,3 +314,18 @@ print(list(map(lambda n : n//2, numbers)))
 # 입력 해야하는 변수
 # : n//2 : 동작할 함수
 ```
+
+## 시간 복잡도 (list vs dictionary)
+* 삭제  
+    * list.remove : O(N)
+    * dic.del : O(1)
+    * 삭제를 해야한다. 이 때 어떤 자료형을 사용할지에 대해 고려할 때, DIC으로 선택
+    * pop : 
+        * 맨 뒤에 있는 것을 반환, 얘는 괜찮음
+        * 하지만 앞에 있거나, 중간에 있는 데이터를 지정해서 꺼내는 것은 시간이 많이 소요됨
+* 탐색
+    * i in list : O(N) 
+    * i in dic : O(1) -> list로 하다가 시간초과나면?
+* 하지만 시간복잡도는 딕셔너리가 낫지만, 메모리는 리스트가 나음
+* 리스트를 먼저 사용하되, 시간 초과로 인해 풀 수가 없다! 하면 딕셔너리 혹은 세트 
+

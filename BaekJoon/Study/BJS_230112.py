@@ -78,7 +78,7 @@ else :
 
 numbers = list(map(int,input()))
 
-zero = []s
+zero = []
 one = []
 cnt = 0
 for i in range(int(len(numbers))-1): 
