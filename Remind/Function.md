@@ -108,6 +108,7 @@
     * x가 리스트 안에 몇 개 있는지 리턴
 * sort
     * 정렬
+    * 단어 길이로 정렬 -> sort(key = len)
 * extend
     * list 자체를 추가
 * clear

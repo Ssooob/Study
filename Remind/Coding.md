@@ -93,6 +93,11 @@ print(sum)
 
 
 ```
+## 변수 없이 돌리기 
+```python 
+for _ in range(n):
+    ~~
+```
 ### 짝수/ 홀수만 나오게 해라
 1. for문에서 2씩 출력 
 ``` python

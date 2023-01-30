@@ -98,4 +98,7 @@ print(my_set)
 
 ```
 
-
+## SET 
+* 집합의 개념
+* b_num = set(map(int,input().split()))
+* 이런식으로 list처럼 사용해주면 됨
