@@ -26,4 +26,62 @@
     * card = deque([i for i in range(1,num+1)])
     * cards = deque(list(range(1,num+1)))
     * 위와 같이 해도 똑같음
+
+</br>
+</br>
+</br>
+
     
+# 이차원리스트
+* 리스트를 원소로 가지는 리스트
+```python
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+# 이차원리스트 만들기 
+# for문 활용
+matrix = []
+for _ in range(10):
+    matrix.append([0]*10)
+import pprint
+pprint.pprint(matrix)
+
+# M : 행, N : 열
+
+for _ in range(N):
+    matrix.append([0]*M)
+
+
+M = 4
+N = 3
+matrix2 = [[0]*M]*N
+print(matrix2)
+matrix2[0][0] =1
+print(matrix2)
+# 이러면 모든 행의 1열에 1이 들어감
+# 해당 리스트의 주소값 자체가 같은 주소를 가리킴
+# 왜냐면 같은 리스트를 곱하기 했기 때문
+print("=====================")
+
+matrix3 = [[0]*M for _ in range(N)]
+print(matrix3)
+matrix3[0][0] = 1
+print(matrix3)
+# 얘가 원하는대로 입력
+
+# 행렬의 크기가 입력으로 주어지는 경우
+# 1
+n,m = map(int,input().split()) # 8 7
+matrix = [list(map(int, input().split())) for _ in range(n)]
+
+#2 
+n,m = map(int,input().split()) # 8 7
+for _ in range(n):
+    line = list(map(int, input().split()))
+    matrix.append(line)
+
+```

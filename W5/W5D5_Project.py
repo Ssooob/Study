@@ -3,7 +3,6 @@ import sys
 sys.stdin = open("input.txt", "r",encoding='UTF8') # ,encoding='UTF8'
 
 
-# 10817 세 수
 '''
 numbers = list(map(int,input().split()))
 numbers.remove(max(numbers))

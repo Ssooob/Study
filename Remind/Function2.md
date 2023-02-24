@@ -71,3 +71,63 @@ add(2,y=5) # 기본값 지정
         ```
 ## 변수
 * 지역변수
+
+
+## Lambda
+* lambda 매개변수 : 표현식
+* (lambda 매개변수들 : 식)(인수들)
+```python 
+def hap (x,y) :
+    return x + y
+>>> hap(10,20)
+30
+
+>>> (lambda x,y : x+y)(10,20)
+30
+
+# map의 경우와 비교
+map(함수, 리스트) # 리스트를 한 개씩 꺼내와서 해당 함수에 적용한 값들 도출
+list(map(lambda x : x**2, range(5)))
+# 0,1,2,3,4 를 하나씩 꺼내서 lambda라는 함수에 적용
+
+
+```
+
+## 정렬
+1. sort 
+    * list.sort()
+2. sorted
+    * sorted(list)
+3. parameter (sorted(list,key))
+    * 기본 값은 reverse = False(오름차순)
+    * reverse = True (내림차순)
+    * key 값 활용 
+        * 정렬을 목적으로 하는 함수를 값으로 넣는다
+        * lambda 활용
+        ```python
+        str_list = ['좋은하루','good_morning','굿모닝','niceday']
+        >>> print(sorted(str_list), key = len)
+        ['굿모닝','좋은하루','niceday','good_morning']
+
+        >>> print(sorted(str_list),key = lambda x : x[1])
+        ['niceday', 'good_morning', '굿모닝', '좋은하루']
+
+        # 여러 요소를 가진 경우, 튜플로 사용
+        tuple_list = [('좋은하루', 0),
+                ('niceday', 1), 
+                ('좋은하루', 5), 
+                ('good_morning', 3), 
+                ('niceday',5)]
+        
+        tuple_list.sort(key = lambda x : (x[0],x[1]))
+        print(tuple_list)
+        [('good_morning', 3), ('niceday', 1), ('niceday', 5), ('좋은하루', 0), ('좋은하루', 5)]
+
+        # 비교할 대상이 여러개인경우, 튜플로 우선순위를 정해줄 수 있음
+        # 위와 동일
+        a = [(1, 2), (5, 1), (0, 1), (5, 2), (3, 0)]
+        sort_score = sorted(a,key = lambda x : (x[0],-x[1]))
+        # reverse 할 때는 -를 붙여주면 됨
+        >>> [(0, 1), (1, 2), (3, 0), (5, 2), (5, 1)]
+
+        ```

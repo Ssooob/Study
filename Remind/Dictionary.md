@@ -193,8 +193,12 @@ sorted(d.items(), key=lambda x: x[1], reverse=True)
     >> 5
 
     end = datetime.date(2023,6,13)
-    print(f'{end - today})
+    print(f'{end - today}')
     >>160 days
 
 
     ```
+
+    ## 해시테이블
+    ### 딕셔너리는 리스트보다 시간 복잡도가 낮은 경우가 있음
+    
